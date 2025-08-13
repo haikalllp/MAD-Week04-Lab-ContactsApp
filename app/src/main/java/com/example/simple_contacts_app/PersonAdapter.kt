@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 // Adapter for displaying a list of Person objects in a RecyclerView
 class PersonAdapter(
-    private val people: List<Person>, // List of people to display
+    private var people: List<Person>, // List of people to display
     private val context: Context      // Context for Toast messages
 ) : RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {
 
@@ -56,4 +56,10 @@ class PersonAdapter(
 
     // Returns the total number of items
     override fun getItemCount(): Int = people.size
+
+    // Function to Update the data and refresh the RecyclerView
+    fun updateData(newPeople: List<Person>) {
+        people = newPeople
+        notifyDataSetChanged()
+    }
 }
