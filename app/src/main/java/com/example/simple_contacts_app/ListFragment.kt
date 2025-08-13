@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class ListFragment : Fragment() {
@@ -29,8 +30,15 @@ class ListFragment : Fragment() {
         // Initialize the adapter with an empty list
         adapter = PersonAdapter(emptyList(), requireContext())
 
-        // Set up the RecyclerView with a GridLayoutManager and an adapter
-        recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+        // Set up the RecyclerView
+
+        // With LinearLayoutManager
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        // With a GridLayoutManager
+        // recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+
+        // Set the adapter to the RecyclerView
         recyclerView.adapter = adapter
 
         vm.people.observe(viewLifecycleOwner) { list ->

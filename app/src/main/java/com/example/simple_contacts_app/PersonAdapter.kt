@@ -25,7 +25,9 @@ class PersonAdapter(
     // Inflates the item layout and creates a ViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_person, parent, false)
+            .inflate(R.layout.item_person_list, parent, false)
+            // With grid layout
+            // .inflate(R.layout.item_person_grid, parent, false)
         return PersonViewHolder(view)
     }
 
