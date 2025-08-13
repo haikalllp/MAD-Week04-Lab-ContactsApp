@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.FragmentManager
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,17 +16,10 @@ class MainActivity : AppCompatActivity() {
         // Ensure status bar icons are dark
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = true
 
-        // Create a RecyclerView with edge-to-edge support
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-
-        val people = listOf(
-            Person("Alice", "987654321"),
-            Person("John", "123456789"),
-            Person("Bob", "555123456")
-        )
-
-        // Use GridLayoutManager with 2 columns instead of LinearLayoutManager
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
-        recyclerView.adapter = PersonAdapter(people, this)
+        // Load FragmentList and FragmentAdd
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.list_container, FragmentList())
+            .replace(R.id.add_container, FragmentAdd())
+            .commit()
     }
 }
