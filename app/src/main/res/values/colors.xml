@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Added a soft background color for grid items -->
+    <color name="lightBlue">#ccedff</color>
+    <!-- Added a color for the Call button -->
+    <color name="blue">#1ea9ff</color>
 </resources>

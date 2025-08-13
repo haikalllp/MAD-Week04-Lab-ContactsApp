@@ -2,32 +2,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:background="@color/lightBlue"
+    android:padding="16dp"
+    android:layout_margin="8dp">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
 
-        <TextView
-            android:id="@+id/textName"
-            android:text="Name"
-            android:textSize="16sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textPhone"
-            android:text="Phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"/>
 
     <Button
         android:id="@+id/btnCall"
-        android:text="Call"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/blue"
+        android:text="Call"
+        android:textSize="16sp"
+        android:layout_margin="8dp" />
+
 </LinearLayout>
