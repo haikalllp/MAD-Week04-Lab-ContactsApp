@@ -1,4 +1,4 @@
-package com.example.recycleview_simple
+package com.example.simple_contacts_app
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -25,4 +25,3 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = PersonAdapter(people, this)
     }
 }
-

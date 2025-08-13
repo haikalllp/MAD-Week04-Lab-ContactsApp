@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RecycleView-Simple"
+rootProject.name = "SimpleContactsApp"
 include(":app")
- 

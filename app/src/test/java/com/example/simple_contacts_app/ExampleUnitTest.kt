@@ -1,4 +1,4 @@
-package com.example.recycleview_simple
+package com.example.simple_contacts_app
 
 import org.junit.Test
 

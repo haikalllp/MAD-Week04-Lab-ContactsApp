@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.recycleview_simple"
+    namespace = "com.example.simple_contacts_app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.recycleview_simple"
+        applicationId = "com.example.simple_contacts_app"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

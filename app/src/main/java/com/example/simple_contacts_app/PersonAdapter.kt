@@ -1,4 +1,4 @@
-package com.example.recycleview_simple
+package com.example.simple_contacts_app
 
 import android.content.Context
 import android.view.LayoutInflater
